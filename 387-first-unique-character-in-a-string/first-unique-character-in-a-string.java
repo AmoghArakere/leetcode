@@ -11,14 +11,14 @@ public class Solution {
                 charMap.put(c, new int[]{1, i}); 
             }
         }
-        int resultIndex = Integer.MAX_VALUE;
+        
         for (int[] value : charMap.values()) {
             if (value[0] == 1) { 
-                resultIndex = Math.min(resultIndex, value[1]); 
+                return value[1]; 
             }
         }
         
-        return resultIndex == Integer.MAX_VALUE ? -1 : resultIndex;
+        return -1;
     }
 
 }
